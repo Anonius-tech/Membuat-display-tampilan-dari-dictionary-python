@@ -1,0 +1,33 @@
+def celcius_ke_fahrenheit(celcius):
+    try:
+        celcius = float(celcius)
+        fahrenheit = (celcius * 9/5) + 32
+        return fahrenheit
+    except ValueError:
+        print("masukkan angka.")
+        return None
+
+def fahrenheit_ke_celcius(fahrenheit):
+    try:
+        fahrenheit = float(fahrenheit)
+        celcius = (fahrenheit - 32) * 5/9
+        return celcius
+    except ValueError:
+        print("masukkan angka.")
+        return None
+
+choice = input("Pilih jenis satuan suhu konversi (Celcius=C, Fahrenheit=F): ")
+
+if choice.upper() == 'C':
+    temperatur_celcius = input("Masukkan suhu dalam bentuk Celcius yang mau di konversikan ke Fahrenheit: ")
+    result = celcius_ke_fahrenheit(temperatur_celcius)
+    if result is not None:
+        print(f"{temperatur_celcius} Celcius sama dengan {result:.2f} Fahrenheit.")
+
+elif choice.upper() == 'F':
+    temperatur_fahrenheit = input("Masukkan suhu dalam bentuk Fahrenheit yang mau dikonversikan ke Celcius: ")
+    result = fahrenheit_ke_celcius(temperatur_fahrenheit)
+    if result is not None:
+        print(f"{temperatur_fahrenheit} Fahrenheit sama dengan {result:.2f} Celcius.")
+else:
+    print("Masukkan suhu yang mau dikonversi dengan benar (C/F)")
