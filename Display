@@ -1,0 +1,81 @@
+#Naufal Afifkaka Fadhilah
+#Membuat display tampilan interaktif sederhana
+
+data = {
+    "NIM": "L300250028",
+    "Nama": "Naufal Afifkaka Fadhilah",
+    "Desa": "Pabelan",
+    "Peliharaan": "Kucing",
+    "Hobi": "Mengerjakan Matematika",
+    "Usia": "19",
+    "Kota": "Surakarta",
+    "Agama": "Islam"
+}
+def tampilkan_nim():
+    print("NIM:", data["NIM"])
+
+def tampilkan_nama():
+    print("Nama:", data["Nama"])
+
+def tampilkan_alamat():
+    print("Desa:", data["Desa"])
+
+def tampilkan_kodepos():
+    print("Peliharaan:", data["Peliharaan"])
+
+def tampilkan_hobi():
+    print("Hobi:", data["Hobi"])
+
+def tampilkan_umur():
+    print("Usia:", data["Usia"])
+
+def tampilkan_telepon():
+    print("Kota", data["Kota"])
+
+def tampilkan_agama():
+    print("Agama:", data["Agama"])
+
+def bantuan():
+    print("Pilihan yang tersedia:")
+    print(" b menampilkan bantuan")
+    print(" N menampilkan NIM")
+    print(" a menampilkan Nama")
+    print(" A menampilkan Desa")
+    print(" K menampilkan Peliharaan")
+    print(" H menampilkan Hobi")
+    print(" U menampilkan Usia")
+    print(" T menampilkan Kota")
+    print(" G menampilkan Agama")
+    print(" k keluar")
+
+
+bantuan()  
+
+pilih = input("Pilihan saudara: ")
+
+while pilih != 'k':
+    if pilih == 'b':
+        bantuan()
+    elif pilih == 'N':
+        tampilkan_nim()
+    elif pilih == 'a':
+        tampilkan_nama()
+    elif pilih == 'A':
+        tampilkan_alamat()
+    elif pilih == 'K':
+        tampilkan_kodepos()
+    elif pilih == 'H':
+        tampilkan_hobi()
+    elif pilih == 'U':
+        tampilkan_umur()
+    elif pilih == 'T':
+        tampilkan_telepon()
+    elif pilih == 'G':
+        tampilkan_agama()
+    else:
+        print("Perintah tidak dikenal!")
+
+    print() 
+    pilih = input("Pilihan saudara: ")
+
+print("Terima kasih.")
